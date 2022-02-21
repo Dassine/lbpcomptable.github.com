@@ -1,18 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-// import Card from '@mui/material/Card';
-import Button from '@mui/material/Button';
-import ReactMarkdown from 'react-markdown';
-import { CardActionArea } from '@mui/material';
-import Typography from '@mui/material/Typography';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
 import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 
 import Main from '../layouts/Main';
 import data from '../data/services';
@@ -27,37 +19,30 @@ const Index = () => {
     </Box>
   );
 
-  // const card = (title, sections) => (
-  //   <Card sx={{ height: 250 }}>
-  //     <CardActionArea sx={{ height: 250 }}>
-  //       <CardContent sx={{ height: 250 }}>
-  //         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-  //           {title}
-  //         </Typography>
+  const history = useHistory();
 
-  //         {sections.map((section) => (
-  //           <Typography
-  //             variant="body2"
-  //             color="text.secondary"
-  //             textTransform="none"
-  //             wordWrap
-  //             sx={{ wordWrap: 'break-word' }}
-  //           >
-  //             {bull} {section} <br />
-  //           </Typography>
-  //         ))}
-  //       </CardContent>
-  //     </CardActionArea>
-  //   </Card>
-  // );
-
-  const card = (title, sections) => (
-    <Card style={{ height: '18rem' }}>
+  const card = (title, index, sections) => (
+    <Card
+      onClick={() => window.location.replace(`/myservices/service${index}`)}
+      style={{
+        cursor: 'position',
+        height: '18rem',
+        backgroundColor: index % 2 == 0 ? 'black' : 'white',
+      }}
+    >
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        {sections.map((section) => (
+        <Card.Title>
+          <h4
+            style={{
+              color: index % 2 == 0 ? 'white' : 'black',
+            }}
+          >
+            {title}
+          </h4>
+        </Card.Title>
+        {/* {sections.map((section) => (
           <footer className="blockquote-footer">{section}</footer>
-        ))}
+        ))} */}
       </Card.Body>
     </Card>
   );
@@ -70,53 +55,21 @@ const Index = () => {
             <h2>
               <Link to="/">Mes Services</Link>
             </h2>
-            {/* <p>
-              A beautiful, responsive, react app written with modern Javascript.
-            </p> */}
           </div>
         </header>
-        {/* <Row>
-          {data.map((service) => card(service.label, service.sections))}
-        </Row> */}
 
         <Grid
           container
-          columns={{ xs: 4, md: 12 }}
+          columns={{ xs: 2, md: 12 }}
           rowSpacing={2}
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         >
-          {data.map((service) => (
-            <Grid item xs={6}>
-              {card(service.label, service.sections)}
+          {data.map((service, index) => (
+            <Grid item xs={isMobile ? 2 : 3}>
+              {card(service.label, index, service.sections)}
             </Grid>
           ))}
         </Grid>
-
-        {/* <p>
-        {' '}
-        Welcome to my website. Please feel free to read more{' '}
-        <Link to='/about'>about me</Link>, or you can check out my{' '}
-        <Link to='/resume'>resume</Link>, <Link to='/projects'>projects</Link>,{' '}
-        or <Link to='/contact'>contact</Link> me.
-      </p> */}
-        {/* <p>
-          {' '}
-          Welcome to my website. Please feel free to read more{' '}
-          <Link to="/about">about me</Link>, or you can check out my{' '}
-          <Link to="/resume">resume</Link>, or{' '}
-          <Link to="/contact">contact</Link> me.
-        </p>
-        <p>
-          {' '}
-          Source available{' '}
-          <a
-            href="https://github.com/Dassine/dassine.github.com"
-            target="_blank"
-          >
-            here
-          </a>
-          .
-        </p> */}
       </article>
     </Main>
   );

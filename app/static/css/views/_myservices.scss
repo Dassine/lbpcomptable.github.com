@@ -1,6 +1,6 @@
-/* Resume */
+/* My Services */
 
-#resume {
+#myservices {
   .link-to {
     position: relative;
     top: -4.5em;
@@ -28,7 +28,7 @@
       text-align: center;
       //   font-size: 1em;
     }
-    .job {
+    .service {
       margin: 1em;
       p {
         margin: 0;
@@ -46,7 +46,7 @@
     font-size: 0.7em;
   }
 
-  .jobs-container {
+  .services-container {
     .description {
       margin: 0;
       font-size: 0.9em;
@@ -118,7 +118,7 @@
 }
 .courses .course-name {
   display: inline;
-  font-family: "Raleway", Helvetica, sans-serif;
+  font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 0.7em;
   font-weight: 400;
   letter-spacing: 0.25em;

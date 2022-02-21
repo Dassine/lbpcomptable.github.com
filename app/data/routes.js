@@ -9,7 +9,7 @@ const data = [
     label: 'À propos',
   },
   {
-    path: '/resume',
+    path: '/myservices',
     label: 'Mes Services',
   },
   // {

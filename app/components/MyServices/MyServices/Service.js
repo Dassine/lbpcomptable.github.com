@@ -1,29 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Job = ({ data }) => (
-  <article className="jobs-container">
+const Service = ({ data }) => (
+  <article className="services-container">
     <header>
       <h4>
         <a href={data.link} target="_blank">
-          {data.company}
+          {data.service}
         </a>
-        <a href={data.sublink} target="_blank">
-          {data.subCompany}
-        </a>
-        - {data.position}
       </h4>
-      <p className="location"> {data.location}</p>
-      <p className="daterange"> {data.daterange}</p>
     </header>
-    <p className="description">{data.description}</p>
+    {/* <p className="description">{data.description}</p> */}
     <ul className="points">
       {data.points && data.points.map((point) => <li key={point}>{point}</li>)}
     </ul>
   </article>
 );
 
-Job.propTypes = {
+Service.propTypes = {
   data: PropTypes.shape({
     link: PropTypes.string.isRequired,
     company: PropTypes.string.isRequired,
@@ -37,4 +31,4 @@ Job.propTypes = {
   }).isRequired,
 };
 
-export default Job;
+export default Service;
