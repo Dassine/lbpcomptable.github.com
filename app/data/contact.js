@@ -5,7 +5,7 @@ import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
 
 const data = [
   {
-    link: 'https://www.linkedin.com/in/louisa-belaïd-cpa-cga-6802aa17/',
+    link: 'https://www.linkedin.com/in/louisa-belaïd-cpa-6802aa17/',
     label: 'LinkedIn',
     icon: faLinkedinIn,
   },

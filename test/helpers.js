@@ -9,22 +9,22 @@ const randomString = (length) => {
 const pages = [
   {
     route: '/',
-    title: 'Services Comptables LBP Inc.',
+    title: 'Services Comptables LBP',
     heading: 'ABOUT THIS SITE',
   },
   {
     route: '/about',
-    title: 'About | Services Comptables LBP Inc.',
+    title: 'About | Services Comptables LBP',
     heading: 'ABOUT ME',
   },
   // {
   //   route: '/projects',
-  //   title: 'Projects | Services Comptables LBP Inc.',
+  //   title: 'Projects | Services Comptables LBP',
   //   heading: 'PROJECTS'
   // },
   {
     route: '/contact',
-    title: 'Contact | Services Comptables LBP Inc.',
+    title: 'Contact | Services Comptables LBP',
     heading: 'CONTACT',
   },
 ];

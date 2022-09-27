@@ -11,7 +11,7 @@ const Navgator = () => (
         <img src={`${BASE_PATH}/images/lbp-logo.jpg`} alt="" />
       </Link>
       <header>
-        <h2>Services Comptables LBP Inc.</h2>
+        <h2>Services Comptables LBP</h2>
         <p>
           <a href="mailto:contact@lbpcomptable.ca">contact@lbpcomptable.ca</a>
         </p>
@@ -29,7 +29,7 @@ const Navgator = () => (
         ))}
       </ul>
       <p className="copyright">
-        &copy; Services Comptables LBP Inc. <Link to="/">lbpcomptable.ca</Link>.
+        &copy; Services Comptables LBP <Link to="/">lbpcomptable.ca</Link>.
       </p>
     </section>
   </section>

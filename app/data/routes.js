@@ -1,7 +1,7 @@
 const data = [
   {
     path: '/',
-    label: 'Services Comptables LBP Inc.',
+    label: 'Services Comptables LBP',
     index: true,
   },
   {

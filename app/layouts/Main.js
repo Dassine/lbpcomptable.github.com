@@ -29,8 +29,8 @@ class Main extends Component {
     return (
       <div id="wrapper">
         <Helmet
-          titleTemplate="%s | Services Comptables LBP Inc."
-          defaultTitle="Services Comptables LBP Inc."
+          titleTemplate="%s | Services Comptables LBP"
+          defaultTitle="Services Comptables LBP"
         />
         <Header />
         <div id="main">{this.props.children}</div>
